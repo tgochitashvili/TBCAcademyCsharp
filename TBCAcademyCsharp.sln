@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBCAcademyCsharp", "TBCAcademyCsharp\TBCAcademyCsharp.csproj", "{C1BC8B56-B93D-4232-9808-2B3208255F28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment2", "Assignment2\Assignment2.csproj", "{591F4B97-0352-4CB6-A7FB-A5F3488A4706}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C1BC8B56-B93D-4232-9808-2B3208255F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1BC8B56-B93D-4232-9808-2B3208255F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1BC8B56-B93D-4232-9808-2B3208255F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591F4B97-0352-4CB6-A7FB-A5F3488A4706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591F4B97-0352-4CB6-A7FB-A5F3488A4706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591F4B97-0352-4CB6-A7FB-A5F3488A4706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591F4B97-0352-4CB6-A7FB-A5F3488A4706}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
