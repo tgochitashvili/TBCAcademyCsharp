@@ -8,7 +8,7 @@ namespace TBCAcademyCsharp.Assignment_02
 {
     public class Task02
     {
-        public void Main(String[] args)
+        public static void Main(String[] args)
         {
             Run();
         }

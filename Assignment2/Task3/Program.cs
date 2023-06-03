@@ -10,7 +10,7 @@ namespace TBCAcademyCsharp.Assignment_02
 {
     internal class Task03
     { 
-        public void Main(String[] args)
+        public static void Main(String[] args)
         {
             Run();
         }
