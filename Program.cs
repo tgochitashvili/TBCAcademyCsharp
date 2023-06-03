@@ -1,10 +1,18 @@
-﻿namespace TBCAcademyCsharp
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TBCAcademyCsharp.Assignment_02
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            /*Task02.Run();*/
+            Task03.Run();
+            /*Task04.Run();*/
         }
     }
 }
