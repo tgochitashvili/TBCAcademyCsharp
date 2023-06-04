@@ -14,57 +14,46 @@ namespace TBCAcademyCsharp.Assignment_02
             Run();
         }
 
-
+        enum ChineseZodiac
+        {
+            Rat = 1,
+            Ox,
+            Tiger,
+            Rabbit,
+            Dragon,
+            Snake,
+            Horse,
+            Goat,
+            Monkey,
+            Rooster,
+            Dog,
+            Pig
+        }
         public static void Run()
         {
-            //could be done with ChineseLunisolarCalendar
-            while (true)
+            ChineseLunisolarCalendar chLuniCal = new ChineseLunisolarCalendar();
+            for(; ;)
             {
                 try
                 {
                     Console.WriteLine("Enter your birth year:");
                     string yearStr = Console.ReadLine();
                     int year = Convert.ToInt32(yearStr);
-                    Console.WriteLine("You were born in the year of the " + GetAnimal(year));
+
+                    DateTime dateTime = chLuniCal.ToDateTime(year, 1, 1, 0, 0, 0, 0); //ჩინურ ახალ წელს რომ დაემთხვეს, 
+                    int sexagenaryYear = chLuniCal.GetSexagenaryYear(dateTime);
+                    int terrestrialBranch = chLuniCal.GetTerrestrialBranch(sexagenaryYear);
+
+                    Console.WriteLine("You were born in the year of the " + ((ChineseZodiac) terrestrialBranch).ToString());
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine("Only years between 1901 and 2100 are supported.");
                 }
                 catch
                 {
                     continue;
                 }
-            }
-        }
-
-        public static string GetAnimal(int year)
-        {
-            switch ((year - 4) % 12) //won't work under 5 AD
-
-
-            {
-                //can be replaced with a dictionary 
-                case 0:
-                    return "Rat";
-                case 1:
-                    return "Ox";
-                case 2:
-                    return "Tiger";
-                case 3:
-                    return "Rabbit";
-                case 4:
-                    return "Dragon";
-                case 5:
-                    return "Snake";
-                case 6:
-                    return "Horse";
-                case 7:
-                    return "Goat";
-                case 8:
-                    return "Monkey";
-                case 9:
-                    return "Rooster";
-                case 10:
-                    return "Dog";
-                default: //11
-                    return "Pig";
             }
         }
     }
