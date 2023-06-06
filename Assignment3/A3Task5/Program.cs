@@ -4,7 +4,7 @@ namespace A3Task5
 {
     internal class Program
     {
-        static void Run()
+        static void Main(string[] args)
         {
             Random random = new Random();
             bool donePlaying = false;
