@@ -13,8 +13,8 @@ namespace A3Task5
                 Console.Clear();
                 try
                 {
-                    int min = int.MinValue;
-                    int max = int.MaxValue;
+                    int min = 0;
+                    int max = 0;
 
                     for (; ;) //min prompt loop
                     {
