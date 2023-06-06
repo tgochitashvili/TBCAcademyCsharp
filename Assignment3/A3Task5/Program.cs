@@ -15,12 +15,12 @@ namespace A3Task5
                 {
                     int min = int.MinValue;
                     int max = int.MaxValue;
-                    Console.WriteLine("Enter min");
 
                     for (; ;) //min prompt loop
                     {
                         try
                         {
+                            Console.WriteLine("Enter min");
                             string minStr = Console.ReadLine();
                             min = Convert.ToInt32(minStr);
                             break;
@@ -36,6 +36,7 @@ namespace A3Task5
                     {
                         try
                         {
+                            Console.WriteLine("Enter max");
                             string maxStr = Console.ReadLine();
                             max = Convert.ToInt32(maxStr);
                             break;
