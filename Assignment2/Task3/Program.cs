@@ -84,8 +84,7 @@ namespace TBCAcademyCsharp.Assignment_02
             {
                 return !(a == b);
             }
-
-            public string ToString()
+            override public string ToString()
             {
                 return this.moveValue.ToString();
             }

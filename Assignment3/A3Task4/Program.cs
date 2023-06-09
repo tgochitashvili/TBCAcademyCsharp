@@ -24,7 +24,6 @@ namespace A3Task4
 
         static string Stars(int num)
         {
-
             if(num <= 0)
             {
                 return "";
@@ -35,9 +34,7 @@ namespace A3Task4
                 output += new StringBuilder().Insert(0, " ", (num-i+1)).ToString();
                 output += new StringBuilder().Insert(0, "*", (i*2)-1).ToString() + "\n";
             }
-
             return output;
-
         }
     }
 }
