@@ -30,7 +30,7 @@
                         Console.WriteLine("Enter a valid char or 'q!' to stop");
                     }
                 }
-
+                Console.WriteLine(A5Task1.FormatThing(arr));
                 for (; ; )
                 {
                     try
