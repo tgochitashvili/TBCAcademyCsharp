@@ -3,6 +3,14 @@ using System.Collections;
 
 namespace LibrarySystem
 {
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+
+        }
+    }
+
     public class Book
     {
         private string _title;
@@ -71,10 +79,6 @@ namespace LibrarySystem
 
     public class Library : IEnumerable<Book>
     {
-        public static void Main(string[] args)
-        {
-
-        }
         private CustomList<Book> _books;
 
         public Book this[int index]
@@ -149,6 +153,8 @@ namespace LibrarySystem
 
         
     }
+
+
 
     public class CustomList<T> : IEnumerable<T>
     {
