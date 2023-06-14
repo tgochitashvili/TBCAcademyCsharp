@@ -228,7 +228,7 @@ namespace LibrarySystem
         public CustomList<T> AddList(CustomList<T> otherList)
         {
             T[] tempArr = otherList.InternalCutArray;
-            while (_lastIndex + otherList.Count >= _arr.Length)
+            while(_lastIndex + otherList.Count >= _arr.Length)
             {
                 double resizeBy = (otherList.Count + 1) / (this.Count > 0 ? this.Count : 1);
                 Resize(Math.Max(1.5, resizeBy));
@@ -308,7 +308,7 @@ namespace LibrarySystem
         }
         private void Resize(double rate = 1.5)
         {
-            int newSize = (int)Math.Ceiling(_arr.Length + 1 * rate);
+            int newSize = (int)Math.Ceiling((_arr.Length + 1) * rate);
             T[] newArr = new T[newSize];
             _arr.CopyTo(newArr, 0);
             _arr = newArr;
