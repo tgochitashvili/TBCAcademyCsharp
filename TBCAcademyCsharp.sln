@@ -55,7 +55,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment8", "Assignment8"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A8Task1", "Assignment8\A8Task1\A8Task1.csproj", "{853B535F-115D-4C7C-BF0D-CFB7BB5AE1D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A8Task2", "Assignment8\A8Task2\A8Task2.csproj", "{83F71E5C-9448-4DF3-95EE-62FA61CAFF38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A8Task2Part1", "Assignment8\A8Task2\A8Task2Part1.csproj", "{83F71E5C-9448-4DF3-95EE-62FA61CAFF38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
