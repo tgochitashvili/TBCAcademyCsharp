@@ -6,7 +6,29 @@ namespace A8Task1
     {
         static void Main(string[] args)
         {
-            
+            int targetIter = 100;
+            double error = 1e-3;
+
+            Console.WriteLine("Powers: ");
+            for (int num = -100; num < targetIter; num+=20)
+            {
+                for(int power = -100; power < targetIter; power+=20)
+                {
+                    double calcAnswer = Calculator.Pow(num, power);
+                    double mathAnswer = Math.Pow(num, power);
+                    if (Calculator.Abs(calcAnswer - mathAnswer) > Calculator.Abs(mathAnswer * error))
+                        Console.WriteLine($"When num: {num}, power: {power} => Calculator: {calcAnswer}, Math: {mathAnswer}");
+                }
+            }
+
+            Console.WriteLine("Square roots:");
+            for (int num = 0; num < targetIter; num+=10)
+            {
+                double calcAnswer = Calculator.Sqrt(num);
+                double mathAnswer = Math.Sqrt(num);
+                if (Calculator.Abs(calcAnswer - mathAnswer) > Calculator.Abs(mathAnswer * error))
+                    Console.WriteLine($"When num: {num} => Calculator: {calcAnswer}, Math: {mathAnswer}");
+            }
         }
 
         public static class Calculator
@@ -53,7 +75,7 @@ namespace A8Task1
                 
                 return answer;
             }
-            public static double Sqrt(double num, double error = 1e-15, int minIter = 10)
+            public static double Sqrt(double num, double error = 1e-9, int minIter = 10, int maxIter = 1000)
             {
                 if(num < 0)
                 {
@@ -71,11 +93,14 @@ namespace A8Task1
                     lastGuess = num / guess;
                     guess = (guess + lastGuess) / 2.0;
                     i++;
-                } while (guess - lastGuess > error || i < minIter);
+                } while ((guess - lastGuess > error || i < minIter) && i < maxIter);
 
                 return guess;
             }
-
+            public static double Abs(double num)
+            {
+                return num > 0 ? num : -num;
+            }
         }
     }
 }
